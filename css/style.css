@@ -21,8 +21,12 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 80vh min-content 40vw repeat(3, auto);
+  grid-template-rows: 80vh min-content 50vw repeat(3, auto);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+a {
+  text-decoration: none;
 }
 
 .features {
@@ -86,15 +90,66 @@ body {
 .story__pictures {
   background-color: #6d5d4b;
   grid-column: full-start/ col-end 4;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-items: center;
+  background-image: linear-gradient(to left bottom, rgba(198, 153, 99, 0.9), rgba(130, 132, 81, 0.9));
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.story__img-1 {
+  width: 100%;
+  height: 50%;
+  grid-row: 2/6;
+  grid-column: 2/6;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.story__img-2 {
+  width: 115%;
+  grid-row: 4/6;
+  grid-column: 4/7;
+  z-index: 11;
+  box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
 .story__content {
   background-color: #f9f7f6;
   grid-column: col-start 5 / full-end;
+  padding: 10rem 5vw;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+}
+
+.story__text {
+  font-size: 1.6rem;
+  font-style: italic;
 }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-weight: 400;
+}
+
+.heading-2 {
+  font-size: 3.5rem;
+  font-style: italic;
+  line-height: 1.3;
+}
+
+.heading-2__light {
+  color: #f9f7f6;
+}
+
+.heading-2__dark {
+  color: #54483a;
+}
+
+.heading-3 {
+  font-size: 3rem;
+  color: #c69963;
 }
 
 .heading-4 {
@@ -107,4 +162,33 @@ body {
 
 .heading-4__dark {
   color: #54483a;
+}
+
+.btn {
+  display: inline-block;
+  color: white;
+  background-color: #c69963;
+  padding: 1.8rem 3rem;
+  font-size: 1.5rem;
+  transition: background .4s;
+}
+
+.btn:hover {
+  background-color: #828451;
+}
+
+.mb-sm {
+  margin-bottom: 2rem;
+}
+
+.mb-md {
+  margin-bottom: 3rem;
+}
+
+.mb-lg {
+  margin-bottom: 4rem;
+}
+
+.mb-xl {
+  margin-bottom: 8rem;
 }
