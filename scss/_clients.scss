@@ -1,0 +1,29 @@
+.clients {
+    background-color: $color-secondary;
+    grid-column: col-start 7 / full-end;
+    padding: 3rem;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    grid-row-gap: 2rem;
+    overflow: hidden;
+
+    &__list {
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      grid-column-gap: 2rem;
+      grid-row-gap: 5vh;
+      align-items: center;
+    }
+    &__img {
+       display: block;
+       width: 5rem;
+       height: 5rem;
+       border-radius: 50%;
+    }
+    &__campaign {
+       color:$color-grey-light-1;
+       margin-top: .7rem;
+       font-size: 1.4rem;
+    }
+}

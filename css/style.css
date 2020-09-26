@@ -318,9 +318,36 @@ a {
   text-align: center;
 }
 
-.realtors {
+.clients {
   background-color: #101d2c;
   grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  grid-row-gap: 2rem;
+  overflow: hidden;
+}
+
+.clients__list {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-column-gap: 2rem;
+  grid-row-gap: 5vh;
+  align-items: center;
+}
+
+.clients__img {
+  display: block;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+.clients__campaign {
+  color: #f9f7f6;
+  margin-top: .7rem;
+  font-size: 1.4rem;
 }
 
 .sidebar {
