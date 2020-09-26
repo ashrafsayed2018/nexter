@@ -11,6 +11,13 @@ $color-grey-light-2 : #aaa;
 $color-grey-dark-1 : #54483a;
 $color-grey-dark-2 : #6d5d4b;
 
+// responsive breakpoints
+
+$media-largest : 75em; // 1200px
+$media-large : 62.5em ;// 900px
+$media-medium: 50em ;// 800px
+$media-small: 37.5em ;// 800px
+
 *,
 *::after,
 *::before {
@@ -22,6 +29,10 @@ html {
     box-sizing: border-box;
     font-size: 62.5%; // font size is 10px 
     direction: rtl;
+
+    @media screen and (max-width : $media-largest) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -34,6 +45,15 @@ body {
     display: grid;
     grid-template-rows: 90vh min-content 50vw repeat(3, auto) ;
     grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content,14rem) [col-end] ) [center-end]  minmax(6rem,1fr)  [full-end];
+
+    @media screen and (max-width : $media-large) {
+        grid-template-rows:8rem 90vh min-content 50vw repeat(3, auto) ;
+        grid-template-columns:  [full-start] minmax(6rem,1fr) [center-start] repeat(8,[col-start] minmax(min-content,14rem) [col-end] ) [center-end]  minmax(6rem,1fr)  [full-end];
+    }
+
+    @media screen and (max-width : $media-medium) {
+        grid-template-rows:8rem calc(100vh - 8rem) ;
+    }
 }
 a{
     text-decoration: none;

@@ -9,11 +9,17 @@
     padding: 8rem;
     padding-top: 3rem;
     display: grid;
-    grid-template-rows: 1fr min-content 6rem 1fr;
-    grid-template-columns: max-content;
+    grid-template-rows: 1fr min-content minmax(6rem , min-content) 1fr;
+    grid-template-columns: minmax(40rem, max-content);
     grid-row-gap: 1.5rem;
     justify-content: center;
     overflow: hidden;
+    @media screen and (max-width : $media-medium) {
+        grid-column: full-start/full-end;
+    }
+    @media screen and (max-width : $media-small) {
+        padding: 4rem;
+    }
 
     &__logo {
         height: 3rem;
@@ -44,6 +50,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-column-gap: 3rem;
         justify-items: center;
+        align-items: center;
         a {
          text-decoration: none;
          font-size: 3rem;

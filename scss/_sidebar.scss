@@ -4,6 +4,12 @@
     grid-row: 1/-1;
     display: flex;
     justify-content: center;
+    @media screen and (max-width : $media-largest) {
+        grid-column: 1/ -1;
+        grid-row: 1/2;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 .nav-btn {
     display: block;
@@ -14,6 +20,7 @@
     height: 2px;
     width: 4.5rem;
     margin-top: 4rem;
+
     &::after,
     &::before {
         display: block;
@@ -28,4 +35,15 @@
     &::after {
         transform: translateY(1.5rem);
      }
+
+     @media screen and (max-width : $media-largest) {
+        margin-top: 0;
+        margin-right: 2rem;
+        &::before {
+         transform: translateY(-1rem);
+      }
+      &::after {
+          transform: translateY(1rem);
+       }
+     } 
 }
