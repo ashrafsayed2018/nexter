@@ -58,3 +58,11 @@ body {
 a{
     text-decoration: none;
 }
+.add-button {
+    width: 200px;
+    position: fixed;
+    bottom: 10px;
+    left: calc(50% - 100px);
+    outline: none;
+    z-index: 1000;
+}

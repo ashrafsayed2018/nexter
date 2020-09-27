@@ -48,6 +48,15 @@ a {
   text-decoration: none;
 }
 
+.add-button {
+  width: 200px;
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% - 100px);
+  outline: none;
+  z-index: 1000;
+}
+
 .features {
   grid-column: center-start/center-end;
   margin: 15rem 0;
@@ -115,13 +124,6 @@ a {
   font-size: 1.4rem;
   color: #aaa;
   text-align: center;
-}
-
-.add-button {
-  width: 200px;
-  position: fixed;
-  bottom: 10px;
-  left: calc(50% - 100px);
 }
 
 .gallery {
@@ -297,6 +299,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-row-gap: 3.5rem;
+  box-shadow: 0 2rem 3rem rgba(16, 29, 44, 0.25);
 }
 
 .service__img {
@@ -586,6 +589,7 @@ a {
   padding: 1.8rem 3rem;
   font-size: 1.5rem;
   transition: background .4s;
+  border: none;
 }
 
 .btn:hover {
