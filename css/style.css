@@ -117,6 +117,13 @@ a {
   text-align: center;
 }
 
+.add-button {
+  width: 200px;
+  position: fixed;
+  bottom: 10px;
+  left: calc(50% - 100px);
+}
+
 .gallery {
   background-color: #54483a;
   grid-column: full-start/full-end;

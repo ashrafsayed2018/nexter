@@ -37,3 +37,9 @@
     color: $color-grey-light-2;
     text-align: center;
 }
+.add-button {
+    width: 200px;
+    position: fixed;
+    bottom: 10px;
+    left: calc(50% - 100px);
+}
